@@ -1,0 +1,11 @@
+[run]
+source =
+    fitbit
+    .
+omit =
+    */fitbit_tests/*
+    */tests/*
+    */.tox/*
+    */site-packages/*
+    */__init__.py
+    */setup.py
