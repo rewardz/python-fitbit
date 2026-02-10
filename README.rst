@@ -42,3 +42,20 @@ To modify and test the library, you need to install the developer requirements:
 To run the library on a continuous integration server, you need to install the test requirements:
 
    sudo pip install -r requirements/test.txt
+
+Makefile Commands
+-----------------
+
+The project includes a ``Makefile`` to simplify testing tasks.
+All targets are defined as ``.PHONY`` so they always execute when called.
+
+Available commands:
+
+make help
+  Displays all available Makefile commands.
+
+make test_with_coverage
+  Executes the test suite and shows a coverage report in the terminal.
+
+make build_with_django_18
+  Build and run docker image with django 1.8
