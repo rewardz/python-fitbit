@@ -47,4 +47,4 @@ RUN pip install -r /code/${REQUIREMENTS_FILE}
 
 COPY . /code/
 
-CMD ["make", "help"]
+CMD ["make", "test_with_coverage"]
