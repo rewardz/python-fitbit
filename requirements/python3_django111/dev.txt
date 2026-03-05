@@ -1,0 +1,5 @@
+-r base.txt
+-r test.txt
+
+cherrypy==18.10.0
+tox
