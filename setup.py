@@ -1,12 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import sys
 import re
 
 from setuptools import setup
 
-required = [line for line in open('requirements/django18/base.txt').read().split("\n") if line != '']
-required_test = [line for line in open('requirements/django18/test.txt').read().split("\n") if not line.startswith("-r") and line != '']
+if sys.version_info[0] < 3:
+    required = [line for line in open('requirements/django18/base.txt').read().split("\n") if line != '']
+    required_test = [line for line in open('requirements/django18/test.txt').read().split("\n") if not line.startswith("-r") and line != '']
+else:
+    required = [line for line in open('requirements/python3_django111/base.txt').read().split("\n") if line != '']
+    required_test = [line for line in open('requirements/python3_django111/test.txt').read().split("\n") if not line.startswith("-r") and line != '']
 
 fbinit = open('fitbit/__init__.py').read()
 author = re.search("__author__ = '([^']+)'", fbinit).group(1)
