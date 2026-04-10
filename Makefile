@@ -17,7 +17,7 @@ build_with_django_18:
 	docker build -t python-fitbit18 --build-arg REQUIREMENTS_FILE=requirements/django18/test.txt .
 	docker run -it --rm python-fitbit18
 
-# Start build with django version 1.8 and start container
+# Start build with django version 1.11 and start container
 build_with_django_111:
 	@echo "Starting Docker build..."
 	docker build -t python-fitbit111 --build-arg REQUIREMENTS_FILE=requirements/django111/test.txt .
