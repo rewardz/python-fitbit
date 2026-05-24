@@ -1,0 +1,7 @@
+mock==5.2.0
+coverage==7.2.7
+Sphinx<5
+tox
+requests==2.31.0
+requests-oauthlib==2.0.0
+cherrypy==18.10.0

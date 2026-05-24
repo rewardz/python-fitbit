@@ -1,14 +1,19 @@
+import sys
 import unittest
 import mock
 
 import gather_keys_cli
 
+if sys.version_info[0] == 2:
+    input_patch = '__builtin__.raw_input'
+else:
+    input_patch = 'builtins.input'
 
 class TestGatherKeysCLI(unittest.TestCase):
 
     @mock.patch('gather_keys_cli.webbrowser.open')
     @mock.patch('gather_keys_cli.FitbitOauthClient')
-    @mock.patch('__builtin__.raw_input')  # Python 2.7 input
+    @mock.patch(input_patch)
     def test_gather_keys_success(self, mock_raw_input, mock_client_cls, mock_browser):
         """
         Test successful OAuth flow in gather_keys()

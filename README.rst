@@ -62,3 +62,6 @@ make build_with_django_18
 
 make build_with_django_111
   Build and run docker image with django 1.11
+
+make build_with_django_111_37
+  Build and run docker image with django 1.11 and python 3.7
